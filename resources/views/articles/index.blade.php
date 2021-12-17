@@ -35,7 +35,7 @@
                             <tr>
                            <td>{{ $article->title }}</td>
                            <td>{!! $article->body !!}</td>
-                           <td> <a href="" class="btn btn-warning">pdf</a> </td> 
+                           <td> <a href="pdf/{{$article->id}}/single/" class="btn btn-warning">pdf</a> </td> 
                            <td><a href="" class="btn btn-success far fa-eye" > show</a>
                            <a href="" class="btn btn-primary fa fa-pen" >edit</a>
                                 <a href="" class="btn btn-danger fa fa-trash" >delete</a>
@@ -46,6 +46,7 @@
                           
                         </tbody>
                         </table>
+                        <a href="pdf/all" class="btn btn-danger">pdf all</a>
                         </div>
     
                 </div>

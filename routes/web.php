@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SocialController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\PdfgeneratorController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,3 +31,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::resource('articles' , ArticleController::class);
+
+Route::get('/pdf/{article}/single/' ,[PdfgeneratorController::class , 'generate_single_pdf'])->name('single');
+Route::get('/pdf/all' ,[PdfgeneratorController::class , 'generate_all'])->name('all');
